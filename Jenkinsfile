@@ -1,10 +1,15 @@
-Pipeline {
+pipeline {
   agent any
     stages{
        stage('system-check'){
-         steps{
-           echo "I am DevOps"
+       steps{
+          sh 'echo "I am DevOps"'
          }
+       }
+       stage('check systems again'){
+        steps{
+          sh 'echo "What are you?"'
+        }
        }   
     }
 }
